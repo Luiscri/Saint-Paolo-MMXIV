@@ -1,0 +1,350 @@
+/**********************************
+*	          Fonts               *
+***********************************/
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+}
+
+.fontBig {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
+/**********************************
+*	      Page general use        *
+***********************************/
+
+html, body, #fullHeader {
+    margin: 0px;
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a:focus, a:active, a:hover, a {
+    outline: 0;
+}
+
+/*******************************
+            Centrar            *
+ *******************************/
+
+/* FlexBox (se le pone al padre) */
+.centerVertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.centerVertical2 {
+    justify-content: center;
+    align-items: center;
+}
+
+.centerHorizontal {
+    margin: 0 auto;
+}
+
+/* Vertical y Horizontalmente */
+.centerBoth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/**********************************
+*	        Cover Page            *
+***********************************/
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+#navFill {
+    margin-top: 66px;
+}
+
+.portada {
+    width: 100%;
+    height: 100%;
+}
+.portadaImg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.portadaLetras {
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 2em;
+    width: 33%;
+    min-width: 170px;
+    text-align: center;
+    background-color: #000000;
+}
+
+.portadaLetras > p {
+    margin: 0 0;
+}
+
+/**********************************
+*	    Nav:hover Underline       *
+***********************************/
+
+span.nav-text {
+    text-decoration: none;
+    position: relative;
+}
+
+.animated:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.animated:hover:before {
+    color: #000000;
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -o-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.actual:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+}
+
+/**********************************
+*	      Index Sections	      *
+***********************************/
+
+.btn {
+    text-transform: uppercase;
+    cursor: pointer;
+    color: black;
+    border: solid #000000 1px;
+    background-color: transparent;
+}
+
+.btnTienda {
+    border: 2px solid white;
+    font-weight: bold;
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+}
+
+#cajasImg{
+    width: 75%;
+    height: auto;
+}
+
+.positionRelative {
+    position: relative;
+}
+
+#nacex {
+    height: 30px;
+    width: auto;
+}
+
+.sideImg {
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
+    /*
+        Poner un max-height decente para que se vea bien en los pantallotes
+     */
+}
+
+.bg-grey {
+    background-color: #eaecee;
+}
+
+.discount {
+    border: 2px solid black;
+    font-weight: bold;
+    border-radius: .25em;
+}
+
+#emailInput {
+    width: auto;
+}
+
+/**********************************
+*	          Footer	      	  *
+***********************************/
+
+footer p {
+    margin: 0 0;
+}
+
+.colorBlack, .colorBlack:hover {
+    color: #000000
+}
+
+/**********************************
+*	           Shop 	      	  *
+***********************************/
+
+.line {
+    height: 3px;
+    width: auto;
+    background-color: #000000;
+}
+
+.sudaderaImg {
+    width: 300px;
+    height: 445px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.divFotos a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.noDecoration, .noDecoration:hover {
+    text-decoration: none;
+    color: #000000;
+}
+
+#accordion .card-header {
+    cursor: pointer;
+}
+
+.card-body img {
+    width: 100%;
+    height: auto;
+}
+
+.doubleImgLeft {
+    object-position: left;
+    -webkit-transition: object-position 0.75s;
+    -moz-transition: object-position 0.75s;
+    -o-transition: object-position 0.75s;
+    transition: object-position 0.75s;
+}
+
+.doubleImgLeft:hover {
+    object-position: right;
+}
+
+.doubleImgRight {
+    object-position: right;
+    -webkit-transition: object-position 0.75s;
+    -moz-transition: object-position 0.75s;
+    -o-transition: object-position 0.75s;
+    transition: object-position 0.75s;
+}
+
+.doubleImgRight:hover {
+    object-position: left;
+}
+
+@media screen and (max-width : 480px){
+    .resize{
+        font-size: 12px;
+    }
+}
+
+/**********************************
+*	           Zoom 	      	  *
+***********************************/
+
+.zoom .zoomImg:hover {
+    cursor: crosshair;
+}
+
+.zoom .thumbnail{
+    cursor: pointer;
+}
+
+/**********************************
+*	Validation Missing Classes 	  *
+***********************************/
+
+.help-block {
+    display: block;
+    margin-top: .25rem;
+    font-size: .875rem;
+    color: #dc3545;
+}
+
+.has-error .help-block {
+    color: #dc3545;
+}
+
+.has-error .col-form-label {
+    color: #dc3545;
+}
+
+.has-error .form-control {
+    border-color: #dc3545;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+.help-block ul {
+    margin-bottom: 0px;
+}
+
+.colorGreen {
+    color: green;
+}
+
+.colorRed {
+    color: #dc3545;
+}
+
+/**********************************
+*	           Admin 	      	  *
+***********************************/
+
+fieldset.scheduler-border {
+    border: 1px solid #000000;
+    -webkit-box-shadow:  0px 0px 0px 0px #000000;
+    box-shadow:  0px 0px 0px 0px #000000;
+}
+
+legend.scheduler-border {
+    width:inherit; /* Or auto */
+    font-size: 1.2em !important;
+    font-weight: bold !important;
+    text-align: left !important;
+}
+
+
+
+
